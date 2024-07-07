@@ -37,7 +37,7 @@ WEATHER_API_KEY = env('WEATHER_API_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://newhng-task.vercel.app/']
 
 
 
