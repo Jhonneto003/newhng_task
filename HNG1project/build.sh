@@ -1,17 +1,12 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Exit on error
-set -e
+set -o errexit
 
-# Install dependencies
+# Modify this line as needed for your package manager (pip, poetry, etc.)
 pip install -r requirements.txt
 
-# Run migrations
-python manage.py migrate
+# Convert static asset files
+python manage.py collectstatic --no-input
 
-# Collect static files
-<<<<<<< HEAD
-python manage.py collectstatic --noinput
-=======
-python manage.py collectstatic --noinput
->>>>>>> be2d73b028d36746c69ab0e6c30e5f13bc0a2ab5
+# Apply any outstanding database migrations
+python manage.py migrate
